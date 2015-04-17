@@ -1,0 +1,34 @@
+@media screen and (max-width: 480px) and (min-width: 180px){
+	.estilo{
+		background-color: #345678;
+		font-size: 18em;
+	}
+}
+@media screen and (max-width: 480px){
+	.img{
+		width: 420px;
+		height: 420px;
+	}
+}
+@media screen and (max-width: 480px){
+	.div{
+		display: none;
+	}
+}
+@media screen and (max-width: 680px){
+	.div{
+		font-size: 10em
+	}
+}
+@media print{
+	.estilo{
+		font-size: 5em;
+		font-style: center;
+		color: #345678;
+
+	}
+	.img{
+		width: 100%;
+		height: 100%;
+	}
+}
