@@ -13,6 +13,13 @@
     e.style.display = (e.style.display == 'block') ? 'none' : 'block';
  	}
 </script>
+	<script type="text/javascript">
+		function sendAlert(field, field2){
+ 		var field = document.getElementById(field);
+ 		var field2 = document.getElementById(field2);
+ 		alert("Tu evento "+ field + " se ha creado \n No olvides asistir a " + field2);
+ 	}
+	</script>
   </head>
   <body>
 
@@ -80,7 +87,7 @@
 	    <div class="large-4 small-4 columns">
 	      <label>Year
 	        <select>
-	          <option value="year" onkeyUp="document.getElementById('nombre').innerHTML = this.value">1992</option>
+	          <option value="year">1992</option>
 	          <option value="year">1993</option>
 	          <option value="year">1994</option>
 	          <option value="year">1995</option>
@@ -98,7 +105,7 @@
 	  </div>
 	  <div class="row">
 	  	<div class="large-12 columns">
-	  		<a href="prin.html" class="button radius">Create </a> 
+	  		<a href="javascript:sendAlert(nombre, lugar)" class="button radius">Create </a> 
 	  	</div>
 	  </div>
 	</form>
