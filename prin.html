@@ -12,11 +12,12 @@
     var e = document.getElementById(event);
     e.style.display = (e.style.display == 'block') ? 'none' : 'block';
  	}
-</script>
+	</script>
+	
 	<script type="text/javascript">
-		function sendAlert(field, field2){
- 		var field = document.getElementById(field);
- 		var field2 = document.getElementById(field2);
+		function sendAlert(field1, field12){
+ 		var field = document.getElementById(field1).value;
+ 		var field2 = document.getElementById(field12).value;
  		alert("Tu evento "+ field + " se ha creado \n No olvides asistir a " + field2);
  	}
 	</script>
@@ -43,7 +44,7 @@
   		<a href="javascript:showhide('event')" class="button radius">Evento</a>
   	</div>
   	<div class="large-6 small-6 column">
-  		<a href="javascript:showhide('event')" class="button radius">Tarea</a>
+  		<a href="javascript:showhide('event2')" class="button radius">Tarea</a>
   	</div>
   </div>
 
@@ -53,13 +54,13 @@
 	  <div class="row">
 	    <div class="large-6 columns">
 	      <label>Nombre del Evento 
-	        <input type="text" placeholder="Evento" onkeyUp="document.getElementById('nombre').innerHTML = this.value"/>
+	        <input id="nombre1" type="text" placeholder="Evento" onkeyUp="document.getElementById('nombre').innerHTML = this.value"/>
 	      </label>
 	    </div>
 	  
 	    <div class="large-6 columns">
 	      <label>Lugar
-	        <input type="text" placeholder="Lugar" onkeyUp="document.getElementById('lugar').innerHTML = this.value"/>
+	        <input id="lugar1" type="text" placeholder="Lugar" onkeyUp="document.getElementById('lugar').innerHTML = this.value"/>
 	      </label>
 	    </div>
 	  </div>
@@ -105,12 +106,54 @@
 	  </div>
 	  <div class="row">
 	  	<div class="large-12 columns">
-	  		<a href="javascript:sendAlert(nombre, lugar)" class="button radius">Create </a> 
+	  		<a href="javascript:sendAlert(nombre1, lugar1)" class="button radius">Create </a> 
 	  	</div>
 	  </div>
 	</form>
-  	</div>
-  </div>
+	</div>
+	</div>
+	<div class="row" id="event2" style="display : none;">
+		<div class="large-12 column">
+			<form>
+				<div class="row">
+	    			<div class="large-6 columns">
+	     				<label>Tarea
+	       					<input id="nombre1" type="text" placeholder="Evento" onkeyUp="document.getElementById('nombre').innerHTML = this.value"/>
+	     				</label>
+	    			</div>
+	  
+	    			<div class="large-6 columns">
+	      				<label>Instrucciones
+	        				<input id="lugar1" type="text" placeholder="Lugar" onkeyUp="document.getElementById('lugar').innerHTML = this.value"/>
+	      				</label>
+	    			</div>
+	  			</div>
+	  			<div class="row">
+	    			<div class="large-4 small-4 columns">
+	     				<label>Day
+	        				<select>
+					          <option value="day">1</option>
+					          <option value="day">2</option>
+					          <option value="day">3</option>
+					          <option value="day">4</option>
+					        </select>
+	      				</label>
+	   				</div>
+				    <div class="large-4 small-4 columns">
+				    	<label>Month
+				        	<select>
+					          <option value="month">1</option>
+					          <option value="month">2</option>
+					          <option value="month">3</option>
+					          <option value="month">3</option>
+					        </select>
+				    	</label>
+				    </div>
+				</div>
+			</form>
+		</div>
+	</div>
+
   <div class="row">
   	<div class="large-12 column">
   		<h3>Nuevos eventos</h3>
